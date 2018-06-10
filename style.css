@@ -44,7 +44,7 @@ body {
   margin-bottom: 0;
 }
 .post-list {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   padding: 0;
@@ -52,12 +52,9 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  transition: all .3s ease 0s;
-  transform: translateY(0px);
   visibility: visible;
 }
 .post-list--hide {
-  transform: translateY(-20px);
   opacity: 0;
   visibility: hidden;
 }
@@ -75,20 +72,6 @@ body {
 .post-view__date {
   font-family: "Inconsolata", monospace;
   margin-bottom: 60px;
-  transform: translateY(45px);
-  transition: transform .3s ease 0s;
-}
-.post-view__image {
-  position: fixed;
-  transition: all .5s ease 0s;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  width: 800px;
-  background-size: cover;
-  background-position: top;
-  overflow: hidden;
-  height: 450px;
-  top: 50%;
-  margin-top: -225px;
 }
 .post-view__container {
   position: absolute;
@@ -97,12 +80,9 @@ body {
   max-width: 900px;
   z-index: 999999;
   opacity: 0;
-  transition: all .3s ease 0s;
 }
 .post-view__content {
   margin-bottom: 80px;
-  transform: translateY(85px);
-  transition: transform .3s ease 0s;
 }
 .post-view__content p {
   font-size: 1.125em;
@@ -111,14 +91,6 @@ body {
 }
 .post-view__content p:last-child {
   margin-bottom: 0;
-}
-.post-view--active .post-view__image {
-  background-position: top;
-  transition: all .6s ease 0s;
-  width: 100%;
-  height: 520px;
-  margin-top: 0;
-  top: 0;
 }
 .post-view__title {
   font-size: 2.875em;
@@ -131,18 +103,11 @@ body {
 .post-view--ready .post-view__container {
   opacity: 1;
 }
-.post-view--ready .post-view__date, .post-view--ready .post-view__content {
-  transform: translateY(0px);
-}
-.post-view--ready .post-view__title {
-  transform: translateY(0px) scaleY(1);
-}
-
 .post-controls {
   position: fixed;
   right: 20px;
   flex-direction: column;
-  top: 20px;
+  top: 110px;
   display: flex;
 }
 
@@ -253,4 +218,8 @@ body {
 
 .contents {
       margin-top:100px;
+}
+.post-contents {
+      margin-top:80px;
+      width: 100%;
 }
