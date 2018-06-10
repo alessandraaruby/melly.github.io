@@ -34,8 +34,8 @@ body {
   z-index: -1;
   transition: width .3s ease 0s;
   content: "";
-  background: #fbf9bd;
-  transform: skew(-20deg);
+  background: #F5D04C;
+  transform: skew(-0deg);
 }
 .post__title:hover:after {
   width: 100%;
@@ -149,7 +149,7 @@ body {
 .post-control {
   cursor: pointer;
   font-size: 1.375em;
-  background: #fbf9bd;
+  background: #F5D04C;
   margin-bottom: 15px;
   height: 40px;
   width: 40px;
