@@ -23,11 +23,11 @@
     </div>
    </nav>
 
-    <div class="container text-center contents">
+    <div class="container text-center">
 
   <div id="app">
   <div :class="['post-view', selected ? 'post-view--active' : '' , ready ? 'post-view--ready' : '' ]">
-    <div class="post-view__container" v-if="selected">
+    <div class="post-view__container contents" v-if="selected">
       <div class="post-controls">
         <div class="post-control post-control--close" @click="closePost()"><i class="ion-ios-close-empty"></i></div>
         <div class="post-control" id="next-post" @click="nextPost()"><i class="ion-ios-arrow-right"></i></div>
@@ -37,7 +37,7 @@
       <h3 class="post-view__content" v-html="currentPost.description"></h3>
     </div>
   </div>
-  <div :class="['post-list', selected ? 'post-list--hide' : '']">
+  <div :class="['contents', 'post-list', selected ? 'post-list--hide' : '']">
     <div class="post myblockquote" v-for="(item, index) in posts" v-on:mouseenter="changePost(index)" @click="selectedPost(index)">
       <p class="post__title ellip">{{item.description}}</p>
     </div>
